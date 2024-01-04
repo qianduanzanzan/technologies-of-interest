@@ -1,5 +1,5 @@
 import observe from '@/utils/observer'
-import { ElLoading } from 'element-plus'
+import {ElLoading} from 'element-plus'
 import logo from '@/assets/logo.png'
 // import { set } from 'vue'
 

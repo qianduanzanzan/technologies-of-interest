@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
@@ -8,7 +8,7 @@ import '@/assets/style/common.scss'
 import components from "./components";
 import directives from "./directives";
 import './assets/iconfont/iconfont.js';
-import { createPinia } from 'pinia';
+import {createPinia} from 'pinia';
 import '@/utils/request'
 import '@/mock/index'
 // require('./mock.js')

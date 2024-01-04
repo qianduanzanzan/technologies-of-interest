@@ -1,7 +1,7 @@
-import { ref,Ref,onMounted,onUpdated } from "vue";
+import {ref, Ref, onMounted, onUpdated} from "vue";
 
-export default (addend:number = 1) => {
-    const num:Ref<number> = ref(0)
+export default (addend: number = 1) => {
+    const num: Ref<number> = ref(0)
 
     onMounted(() => {
         console.log(123456)
@@ -13,7 +13,7 @@ export default (addend:number = 1) => {
 
     const addNum = () => {
         num.value += addend
-        localStorage.setItem('aaa','123456')
+        localStorage.setItem('aaa', '123456')
         console.log(localStorage.getItem('aaa'))
     }
 

@@ -16,6 +16,7 @@ export default {
             this.name = this.name == 'xxx' ? '疫情快过去吧' : 'xxx'
             this.count += 2
         },
-        show() { }
+        show() {
+        }
     }
 }

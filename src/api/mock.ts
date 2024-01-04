@@ -29,6 +29,6 @@ export const delNew = (id: any) => {
     return request({
         url: '/mock/delNew',
         method: "delete",
-        data: { id: id }
+        data: {id: id}
     });
 };

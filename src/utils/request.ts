@@ -1,5 +1,5 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
-import { ElMessage } from "element-plus";
+import axios, {AxiosInstance, AxiosRequestConfig} from 'axios'
+import {ElMessage} from "element-plus";
 
 axios.defaults.timeout = 10000;
 // axios.defaults.baseURL = 'http://127.0.0.1:7001'
@@ -11,7 +11,8 @@ axios.defaults.validateStatus = function (status) {
 axios.defaults.withCredentials = false;
 
 axios.interceptors.request.use(
-    (config) => {
+    (config: any) => {
+        config.headers.token = '123456'
         //   const meta = config.meta || {};
         //   const isToken = meta.isToken === false;
         //   if (getToken() && !isToken) {
@@ -30,25 +31,25 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
     (res) => {
-        // console.log(res)
+        // console.log(res,'66668888')
         //   NProgress.done();
-        //   const status = Number(res.status) || 200;
+        const status = Number(res.data.status) || 200;
         //   const statusWhiteList = website.statusWhiteList || [];
-        //   const message = res.data.message || "未知错误";
-        //   //如果在白名单里则自行catch逻辑处理
+        const message = res.data.msg || "未知错误";
+        //如果在白名单里则自行catch逻辑处理
         //   if (statusWhiteList.includes(status)) return Promise.reject(res);
-        //   //如果是401则跳转到登录页面
+        //如果是401则跳转到登录页面
         //   if (status === 401)
         //     store.dispatch("FedLogOut").then(() => router.push({ path: "/login" }));
-        //   // 如果请求为非200否者默认统一处理
-        //   if (status !== 200) {
-        //     Message({
-        //       customClass: "custom-message",
-        //       message: message,
-        //       type: "error",
-        //     });
-        //     return Promise.reject(new Error(message));
-        //   }
+        // 如果请求为非200否者默认统一处理
+        if (status !== 200) {
+            // Message({
+            //   customClass: "custom-message",
+            //   message: message,
+            //   type: "error",
+            // });
+            return Promise.reject(new Error(message));
+        }
         return res;
     },
     (error) => {

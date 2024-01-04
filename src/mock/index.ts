@@ -6,5 +6,4 @@ for (let key in datas) {
     apiList.forEach((item: any) => {
         Mock.mock(`/mock/${item.url}`, item.type, item.api)
     })
-    // Mock.mock(`/mock/${datas[key].default.api}`, datas[key].default.func(Mock.Random))
 }

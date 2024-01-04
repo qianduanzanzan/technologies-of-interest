@@ -1,4 +1,5 @@
-import { People } from "./people";
+import {People} from "./people";
+
 export class Myself extends People {
     private position_x = 0;
     private position_y = 0;

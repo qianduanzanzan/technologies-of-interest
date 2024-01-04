@@ -142,17 +142,18 @@ const console = require("console")
 //   console.log(webSite);
 
 function Foo() {
-    Foo.a = function() {
+    Foo.a = function () {
         console.log(1)
     }
-    this.a = function() {
+    this.a = function () {
         console.log(2)
     }
 }
-Foo.prototype.a = function() {
+
+Foo.prototype.a = function () {
     console.log(3)
 }
-Foo.a = function() {
+Foo.a = function () {
     console.log(4)
 }
 Foo.a();

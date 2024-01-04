@@ -1,4 +1,5 @@
-import type { App } from "vue";
+import type {App} from "vue";
+
 const files = import.meta.globEager("./v*.ts");
 const modules: any = [];
 Object.keys(files).forEach((item) => {

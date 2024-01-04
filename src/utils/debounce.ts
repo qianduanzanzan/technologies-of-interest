@@ -1,7 +1,7 @@
-const debounce = (fn:Function,time = 500) =>{
-    let timeout:any = null
-    return function(){
-        if(timeout) clearTimeout(timeout)
+const debounce = (fn: Function, time = 500) => {
+    let timeout: any = null
+    return function () {
+        if (timeout) clearTimeout(timeout)
         timeout = setTimeout(() => {
             fn(...arguments)
             timeout = null
@@ -17,7 +17,6 @@ export default debounce
 // }
 
 // a(1,2,3,4,5,8)
-
 
 
 // const aaa = () => {

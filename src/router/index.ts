@@ -4,12 +4,13 @@
  *                      这里的是hash模式，这个还可以是createWebHistory等
  * RouteRecordRaw 这个为要添加的路由记录，也可以说是routes的ts类型
  */
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router';
+
 export const adminRouterChildren = [
     {
         path: '/admin/home',
         name: 'home111',
-        component: () => import("@/views/admin/views/home/index.vue"),
+        component: () => import("@/views/home/index.vue"),
         icon: 'jiaozi',
         meta: {
             title: '首页',
@@ -19,7 +20,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/iconfont',
         name: 'iconfont',
-        component: () => import("@/views/admin/views/iconfont/index.vue"),
+        component: () => import("@/views/iconfont/index.vue"),
         icon: 'xuegao',
         meta: {
             title: '图标'
@@ -28,7 +29,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/mockTable',
         name: 'mockTable',
-        component: () => import("@/views/admin/views/mockTable/index.vue"),
+        component: () => import("@/views/mockTable/index.vue"),
         icon: 'kele',
         meta: {
             title: '虚拟表格'
@@ -37,7 +38,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/canvas',
         name: 'canvas',
-        component: () => import("@/views/admin/views/canvas/index.vue"),
+        component: () => import("@/views/canvas/index.vue"),
         icon: 'kafei',
         meta: {
             title: 'canvas'
@@ -46,7 +47,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/worker',
         name: 'worker',
-        component: () => import("@/views/admin/views/worker/index.vue"),
+        component: () => import("@/views/worker/index.vue"),
         icon: 'tilamisu',
         meta: {
             title: 'worker'
@@ -55,7 +56,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/fabric',
         name: 'fabric',
-        component: () => import("@/views/admin/views/fabric/index.vue"),
+        component: () => import("@/views/fabric/index.vue"),
         icon: 'chengzhi',
         meta: {
             title: 'fabric'
@@ -64,7 +65,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/directive',
         name: 'directive',
-        component: () => import("@/views/admin/views/directive/index.vue"),
+        component: () => import("@/views/directive/index.vue"),
         icon: 'doujiang',
         meta: {
             title: 'directive'
@@ -73,7 +74,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/cc-scroll',
         name: 'cc-scroll',
-        component: () => import("@/views/admin/views/cc-scroll/index.vue"),
+        component: () => import("@/views/cc-scroll/index.vue"),
         icon: 'hebaodan',
         meta: {
             title: 'cc-scroll'
@@ -82,7 +83,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/testApi',
         name: 'testApi',
-        component: () => import("@/views/admin/views/testApi/index.vue"),
+        component: () => import("@/views/testApi/index.vue"),
         icon: 'zhouzi',
         meta: {
             title: 'testApi'
@@ -91,7 +92,7 @@ export const adminRouterChildren = [
     {
         path: '/admin/cp',
         name: 'cp',
-        component: () => import("@/views/admin/views/cp/index.vue"),
+        component: () => import("@/views/cp/index.vue"),
         icon: 'zhouzi',
         meta: {
             title: 'cp'
@@ -101,7 +102,7 @@ export const adminRouterChildren = [
         path: '/admin/draggable',
         name: 'draggable',
         redirect: '/admin/draggable/a',
-        // component: () => import("@/views/admin/views/draggable/index.vue"),
+        // component: () => import("@/views/draggable/index.vue"),
         meta: {
             title: '组件-拖拽'
         },
@@ -109,7 +110,7 @@ export const adminRouterChildren = [
             {
                 path: '/admin/draggable/a',
                 name: 'draggable1',
-                component: () => import("@/views/admin/views/draggable/index.vue"),
+                component: () => import("@/views/draggable/index.vue"),
                 meta: {
                     title: '组件-拖拽1'
                 },
@@ -117,7 +118,7 @@ export const adminRouterChildren = [
             {
                 path: '/admin/draggable/b',
                 name: 'draggable2',
-                component: () => import("@/views/admin/views/draggable/draggable.vue"),
+                component: () => import("@/views/draggable/draggable.vue"),
                 meta: {
                     title: '组件-拖拽2'
                 },
@@ -128,7 +129,7 @@ export const adminRouterChildren = [
         path: '/admin/hooks',
         name: 'hooks',
         redirect: '/admin/hooks/a',
-        // component: () => import("@/views/admin/views/draggable/index.vue"),
+        // component: () => import("@/views/draggable/index.vue"),
         meta: {
             title: 'hooks'
         },
@@ -136,7 +137,7 @@ export const adminRouterChildren = [
             {
                 path: '/admin/hooks/a',
                 name: 'hooks1',
-                component: () => import("@/views/admin/views/hooks/index.vue"),
+                component: () => import("@/views/hooks/index.vue"),
                 meta: {
                     title: 'hooks1'
                 },
@@ -144,29 +145,29 @@ export const adminRouterChildren = [
             {
                 path: '/admin/hooks/b',
                 name: 'hooks2',
-                component: () => import("@/views/admin/views/hooks/hooks.vue"),
+                component: () => import("@/views/hooks/hooks.vue"),
                 meta: {
                     title: 'hooks2'
                 },
             }
         ]
     },
-    {
-        path: '/admin/decorators',
-        name: 'decorators',
-        component: () => import("@/views/admin/views/decorators/index.vue"),
-        icon: 'zhouzi',
-        meta: {
-            title: '装饰器'
-        }
-    },
+    // {
+    //     path: '/admin/decorators',
+    //     name: 'decorators',
+    //     component: () => import("@/views/decorators/index.vue"),
+    //     icon: 'zhouzi',
+    //     meta: {
+    //         title: '装饰器'
+    //     }
+    // },
 ]
 // 路由记录，这个跟vue2中用法一致，就不做过多解释了
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'home',
-        component: () => import("@/views/home/index.vue"),
+        component: () => import("@/views/login/index.vue"),
         meta: {
             title: '首页'
         }
@@ -175,7 +176,7 @@ const routes: Array<RouteRecordRaw> = [
         path: '/admin',
         name: 'admin',
         redirect: '/admin/home',
-        component: () => import("@/views/admin/index.vue"),
+        component: () => import("@/layout/index.vue"),
         meta: {
             title: 'admin页面'
         },
